@@ -7,7 +7,8 @@
 }
 
 html {
-  background: url(https://dl.dropboxusercontent.com/u/159328383/background.jpg) no-repeat center center fixed;
+  /*background: url(https://dl.dropboxusercontent.com/u/159328383/background.jpg) no-repeat center center fixed;  */
+    background: url(http://keylines.com/wp-content/uploads/2014/11/Background.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -26,6 +27,7 @@ body, input, button {
   padding: 15px;
   width: 400px;
   min-height: 400px;
+  color: rgba(255, 255, 255, 1);
   margin: 2% auto 0 auto;
 }
 .login .heading {
@@ -34,15 +36,31 @@ body, input, button {
 }
 .login .heading h2 {
   font-size: 3em;
-  font-weight: 300;
-  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
   display: inline-block;
   padding-bottom: 5px;
   text-shadow: 1px 1px 3px #23203b;
 }
+.login .heading h3 {
+  font-size: 1em;
+  font-weight: 150;
+  display: inline-block;
+  padding-bottom: 5px;
+  text-shadow: 1px 1px 3px #23203b;
+}
+
+.login a {
+    color: rgba(255, 255, 255, 1);
+}
+
+.login form {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
 .login form .input-group {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
 .login form .input-group:last-of-type {
   border-top: none;
@@ -54,7 +72,7 @@ body, input, button {
 }
 .login form .input-group span i {
   font-size: 1.5em;
-  color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 1);
 }
 .login form input.form-control {
   display: block;
@@ -76,18 +94,18 @@ body, input, button {
 }
 .login form button {
   margin-top: 20px;
-  background: #27AE60;
+  background: #2775ae;
   border: none;
   font-size: 1.6em;
-  font-weight: 300;
+  font-weight: 150;
   padding: 5px 0;
   width: 100%;
   border-radius: 3px;
-  color: #b3eecc;
-  border-bottom: 4px solid #1e8449;
+  color: rgba(255, 255, 255, 1);
+  border-bottom: 4px solid #221e84;
 }
 .login form button:hover {
-  background: #30b166;
+  background: #221e84;
   -webkit-animation: hop 1s;
   animation: hop 1s;
 }
