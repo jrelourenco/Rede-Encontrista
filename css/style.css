@@ -7,10 +7,9 @@
 }
 
 html {
-  /*background: url(https://dl.dropboxusercontent.com/u/159328383/background.jpg) no-repeat center center fixed;  */
-    background: url(http://keylines.com/wp-content/uploads/2014/11/Background.jpg) no-repeat center center fixed;
+  background: url("../images/background.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
-  -moz-background-size: cover;
+  -moz-background-size: cover; 
   -o-background-size: cover;
   background-size: cover;
 }
