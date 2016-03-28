@@ -104,7 +104,7 @@ body, input, button {
   border-bottom: 4px solid #221e84;
 }
 .login form button:hover {
-  background: #221e84;
+  background: #258ecd;
   -webkit-animation: hop 1s;
   animation: hop 1s;
 }
