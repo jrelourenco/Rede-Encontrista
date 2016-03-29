@@ -8,7 +8,7 @@
     <div class="heading">
     <h2>Rede Encontristas</h2>
     <h3>Bem vindo! Insere as credenciais para entrares</h2>
-        <form action="home.html">
+        <form action="index.php" method="post">
         <!-- Password Field -->
         <div class="input-group input-group-lg">
             <span class="input-group-addon"><i class="fa fa-user"></i></span>
