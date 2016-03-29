@@ -49,6 +49,10 @@ a:hover {
 	color: #000;
 }
 
+.container {
+	padding-left: 190px;
+}
+
 .main,
 .container > header {
 	width: 90%;
