@@ -462,8 +462,8 @@ a:hover {
 	pointer-events: none;
 }
 
-.icon-drop:before, 
-.icon-arrow-left:before {
+.icon-profile:before, 
+.icon-logout:before {
 	font-family: 'fontawesome';
 	position: absolute;
 	top: 0;
@@ -472,22 +472,24 @@ a:hover {
 	speak: none;
 	font-style: normal;
 	font-weight: normal;
-	line-height: 2;
 	text-align: center;
 	color: #47a3da;
 	-webkit-font-smoothing: antialiased;
 	text-indent: 8000px;
-	padding-left: 8px;
+    
+    line-height: 30px;
+	padding-left: 5px;
+    font-size: 23px;
 }
 
 .container > header nav a:hover:before {
 	color: #fff;
 }
 
-.icon-drop:before {
-	content: "\e000";
+.icon-profile:before {
+	content: "\f007"; 
 }
 
-.icon-arrow-left:before {
-	content: "\f060";
+.icon-logout:before {
+	content: "\f023";
 }

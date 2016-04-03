@@ -22,8 +22,8 @@
             <span>Olá João</span>
             <h1>Bem vindo à rede encontristas</h1>
             <nav>
-                <a href="../profile.php" class="icon-drop" data-info="user profile">Ver Perfil</a>
-                <a href="./login.php" class="icon-arrow-left" data-info="logout">Logout</a>
+                <a href="./profile.php" class="icon-profile" data-info="user profile">Ver Perfil</a>
+                <a href="./login.php" class="icon-logout" data-info="logout">Logout</a>
             </nav>
         </header>
         <div class="main">
