@@ -1,22 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt">
-<head>
-    <title>Rede Encontristas: Perfil</title>
-
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <meta name="description" content="Blueprint: Slide and Push Menus" />
-    <meta name="keywords" content="sliding menu, pushing menu, navigation, responsive, menu, css, jquery" />
-    <meta name="author" content="Codrops" />
-    <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-
-</head>
+<?php include 'html-head.php'; ?>
 <body>
-    <div class="menu">
-        <?php include 'menu.php'; ?>
-    </div>
+    <?php include 'html-menu.php'; ?>
     <div class="container">
         <header class="clearfix">
             <h1>O teu Perfil</h1>
@@ -27,41 +13,52 @@
         </header>
             <div class="main">
                 <section>
-                    <form action="index.php" method="post">
+                    <form action="profile.php" method="post">
                         <h2>Dados de Login</h2>
                         
                         <!-- Email Field -->
                         <div class="input-group input-group-lg">
-                            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                            <span class="input-group-addon">Email</span>
                             <input type="text" class="form-control" value="joao@shalom.pt">
                         </div>
 
                         <!-- Password Field -->
                         <div class="input-group input-group-lg">
-                            <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                            <span class="input-group-addon">Password</span>
                             <input type="password" class="form-control" value="*******">
                         </div>
                         
                         <h2>Dados de Pessoais</h2>
                         
-                        <!-- Nome Completo -->
+                        <!-- Name -->
                         <div class="input-group input-group-lg">
-                            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                            <span class="input-group-addon">Nome</span>
                             <input type="text" class="form-control" value="João Nascimento do Carmo">
                         </div>
                         
-                        <!-- Alcunha -->
+                        <!-- Nickname -->
                         <div class="input-group input-group-lg">
-                            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                            <span class="input-group-addon">Alcunha</span>
                             <input type="text" class="form-control" value="Jonas">
                         </div>
 
                         <!-- Birthday Field -->
                         <div class="input-group input-group-lg">
-                            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                            <span class="input-group-addon">Data de Nascimento</span>
                             <input type="text" class="form-control" value="25/12/1980">
                         </div>
-
+                        
+                        <!-- Address -->
+                        <div class="input-group input-group-lg">
+                            <span class="input-group-addon">Morada</span>
+                            <input type="text" class="form-control" value="Rua Fernão Magalhães nº5 3Esq">
+                        </div>
+                        
+                        <!-- Postal Code -->
+                        <div class="input-group input-group-lg">
+                            <span class="input-group-addon">Código Postal</span>
+                            <input type="text" class="form-control" value="2620-123">
+                        </div>
                         <!-- Login Button -->
                         <button type="submit" class="float">Editar</button>
                     </form>

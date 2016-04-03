@@ -68,11 +68,13 @@ body, input, button {
 .login form .input-group:last-of-type {
   border-top: none;
 }
+
 .login form .input-group span {
   background: transparent;
   min-width: 53px;
   border: none;
 }
+
 .login form .input-group span i {
   font-size: 1.5em;
   color: rgba(255, 255, 255, 1);
@@ -356,7 +358,7 @@ a:hover {
 
 
 .container {
-	padding-left: 190px;
+	padding-left: 18%;
 }
 
 .main,
@@ -427,7 +429,7 @@ a:hover {
 }
 
 .main > section {
-	max-width: 260px;
+	/* max-width: 260px; */
 	width: 90%;
 	margin: 0 auto;
 }
@@ -460,6 +462,16 @@ a:hover {
 .main > section button.disabled {
 	background: #aaa;
 	pointer-events: none;
+}
+
+.main > section .input-group {
+    padding: 10px;
+    /* min-width: 500px; */
+}
+
+.main > section .input-group-addon {
+    padding-right: 200px;
+    max-width: 200px;
 }
 
 .icon-profile:before, 
