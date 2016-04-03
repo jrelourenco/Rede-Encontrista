@@ -11,6 +11,14 @@
 |
 */
 
+use App\Encontrista;
+
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/encontrista', function () {
+    $encontrista = Encontrista::find(1);
+    return view('profile', ['name' => $encontrista]);
+
 });
