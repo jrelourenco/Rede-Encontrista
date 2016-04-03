@@ -1,15 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt">
 <head>
-    <link rel="stylesheet" href="css/style.css">
+        <title>Rede Encontristas: Login</title>
+        
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<meta name="description" content="Blueprint: Slide and Push Menus" />
+		<meta name="keywords" content="sliding menu, pushing menu, navigation, responsive, menu, css, jquery" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+    
 </head>
 <body>
     <div class="login">
     <div class="heading">
     <h2>Rede Encontristas</h2>
-    <h3>Bem vindo! Insere as credenciais para entrares</h2>
+    <h3>Bem vindo! Insere as credenciais para entrares</h3>
         <form action="index.php" method="post">
-        <!-- Password Field -->
+        <!-- Username Field -->
         <div class="input-group input-group-lg">
             <span class="input-group-addon"><i class="fa fa-user"></i></span>
             <input type="text" class="form-control" placeholder="Email">
