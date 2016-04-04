@@ -20,71 +20,69 @@
                         <div class="input-group input-group-lg">
                             <span class="input-group-addon">Procurar</span>
                             <input type="text" class="form-control" placeholder="ie Nome do SP, Nome da pessoa, Cargo...">
+                            <!-- <button type="submit" class="float">Procurar</button> -->
+                            <!-- Login Button -->
+
                         </div>
-                        
-                        <table id="table-results" class="table table-bordered table-stripped table-hover">
+                                                    
+                        <div class="table-results">                        
+                        <table class="table table-stripped">
                           <tbody>
                           <tr>
-                            <th>SPs</th>
-                            <th>Population ( 2007 Est.)</th>
-                            <th>Population % of World</th>
-                            <th>% Population ( Penetration )</th>
-                            <th>Usage % of World</th>
+                            <th>SP</th>
+                            <th>Nome</th>
+                            <th>Cargo</th>
+                            <th>Email</th>
+                            <th>Telefone</th>
                           </tr>
                           <tr>
                             <td>Buraca</td>
-                            <td>933,448,292</td>
-                            <td>14.2 %</td>
-                            <td>3.5 %</td>
-                            <td>3.0 %</td>
+                            <td>João António</td>
+                            <td>Coordenador</td>
+                            <td>joao.antonio@shalom.pt</td>
+                            <td>96 123 45 67</td>
                           </tr>
                           <tr>
-                            <td>Aboboda</td>
-                            <td>3,712,527,624</td>
-                            <td>56.5 %</td>
-                            <td>10.5 %</td>
-                            <td>35.6 %</td>
+                            <td>Abóboda</td>
+                            <td>Rui Filipe</td>
+                            <td>Coordenador</td>
+                            <td>rui.filipe@shalom.pt</td>
+                            <td>96 123 45 67</td>
                           </tr>
                           <tr>
                             <td>Venda-Nova</td>
-                            <td>809,624,686</td>
-                            <td>12.3 %</td>
-                            <td>38.6 %</td>
-                            <td>28.6 %</td>
+                            <td>Andreia Macário</td>
+                            <td>Secretário</td>
+                            <td>andreia.macario@shalom.pt</td>
+                            <td>96 123 45 67</td>
                           </tr>
                           <tr>
                             <td>Lavradio</td>
-                            <td>193,452,727</td>
-                            <td>2.9 %</td>
-                            <td>10.0 %</td>
-                            <td>1.8 %</td>
+                            <td>Luis Duarte</td>
+                            <td>Tesoureiro</td>
+                            <td>luis.duarte@shalom.pt</td>
+                            <td>96 123 45 67</td>
                           </tr>
                           <tr>
                             <td>Castelo-Branco</td>
-                            <td>334,538,018</td>
-                            <td>5.1 %</td>
-                            <td>69.4 %</td>
-                            <td>21.2 %</td>
-                          </tr>
-                          <tr>
-                            <td>Braga</td>
-                            <td>556,606,627</td>
-                            <td>8.5 %</td>
-                            <td>16.0 %</td>
-                            <td>8.1 %</td>
+                            <td>Ana Filomena</td>
+                            <td>Coordenador</td>
+                            <td>ana.filomena@shalom.pt</td>
+                            <td>96 123 45 67</td>
                           </tr>
                           <tr>
                             <td>Entroncamento</td>
-                            <td>34,468,443</td>
-                            <td>0.5 %</td>
-                            <td>53.5 %</td>
-                            <td>1.7 %</td>
+                            <td>Mariana Silva</td>
+                            <td>Secretário</td>
+                            <td>mariana.silva@shalom.pt</td>
+                            <td>96 123 45 67</td>
                           </tr>
                         </tbody>
                         </table>
+                            
+                        </div>
 
-                        <!-- Login Button -->
-                        <button type="submit" class="float">Procurar</button>
+                        
                     </form>
                 </section>
         </div>

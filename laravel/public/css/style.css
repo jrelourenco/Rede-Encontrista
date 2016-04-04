@@ -332,7 +332,7 @@ a:hover {
 
 
 .container {
-	padding-left: 18%;
+	padding-left: 10%;
 }
 
 .main,
@@ -480,4 +480,25 @@ a:hover {
 
 .icon-logout:before {
 	content: "\f023";
+}
+
+.table {
+    margin: 0px auto; 
+}
+.table td {
+    background: #fff;
+    height: 46px;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33;
+    /* min-width: 10em; */
+}
+
+.table > tbody > tr > th {
+    background-color: rgba(0,0,0,.075);
+    color: #fff;
+    height: 46px;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33;
 }
