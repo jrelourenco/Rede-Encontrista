@@ -223,7 +223,7 @@ body, input, button {
 /* Orientation-dependent styles for the content of the menu */
 
 .cbp-spmenu-vertical {
-	width: 240px;
+	width: 14em;
 	height: 100%;
 	top: 0;
 	z-index: 1000;
@@ -237,13 +237,13 @@ body, input, button {
 
 /* Vertical menu that slides from the left or right */
 
-.cbp-spmenu-left {
+/* .cbp-spmenu-left {
 	left: -240px;
 }
 
 .cbp-spmenu-left.cbp-spmenu-open {
 	left: 0px;
-}
+} */
 
 /* Push classes applied to the body */
 
@@ -332,7 +332,7 @@ a:hover {
 
 
 .container {
-	padding-left: 10%;
+	padding-left: 14em;
 }
 
 .main,
