@@ -5,7 +5,7 @@
         <a href="profile.php">Perfil</a>
         <a href="#">Currículo</a>
         <a href="#">Calendário</a>
-        <a href="#">Inscrições</a>
+        <a href="registration.php">Inscrições</a>
         <a href="contacts.php">Contactos</a>
     </nav>
 </div>
