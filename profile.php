@@ -6,10 +6,7 @@
     <div class="container">
         <header class="clearfix">
             <h1>O teu Perfil</h1>
-            <nav>
-                <a href="./profile.php" class="icon-profile" data-info="user profile">Ver Perfil</a>
-                <a href="./login.php" class="icon-logout" data-info="logout">Logout</a>
-            </nav>
+            <?php include 'html-header-nav.php'; ?>
         </header>
             <div class="main">
                 <section>

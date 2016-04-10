@@ -5,12 +5,8 @@
     <?php include 'html-menu.php'; ?>
     <div class="container">
         <header class="clearfix">
-            <span>Olá João</span>
             <h1>Bem vindo à rede encontristas</h1>
-            <nav>
-                <a href="./profile.php" class="icon-profile" data-info="user profile">Ver Perfil</a>
-                <a href="./login.php" class="icon-logout" data-info="logout">Logout</a>
-            </nav>
+            <?php include 'html-header-nav.php'; ?>
         </header>
         <div class="main">
             <section>

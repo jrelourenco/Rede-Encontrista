@@ -7,5 +7,7 @@
         <a href="#">Calendário</a>
         <a href="registration.php">Inscrições</a>
         <a href="contacts.php">Contactos</a>
+        <a href="admin-courses.php" class="admin-option">Gerir Cursos</a>
+        <a href="admin-users.php" class="admin-option">Gerir Utilizadores</a>
     </nav>
 </div>

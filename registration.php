@@ -6,10 +6,7 @@
     <div class="container">
         <header class="clearfix">
             <h1>Inscrições de cursos e encontros</h1>
-            <nav>
-                <a href="./profile.php" class="icon-profile" data-info="user profile">Ver Perfil</a>
-                <a href="./login.php" class="icon-logout" data-info="logout">Logout</a>
-            </nav>
+            <?php include 'html-header-nav.php'; ?>
         </header>
             <div class="main">
                 <section>
@@ -20,7 +17,7 @@
                         <select class="form-control">
                           <option>Reencontro Cristo Nosso Irmão - 10 de Maio de 2016 @ CSh Oeiras</option>
                           <option>Curso de Oração - 12 de Abril de 2016 @ CSh Braga</option>
-                          <option>Curso Pedagogia Dinâmica - 10 Junto de 2016 @ Paróquia Algés</option>
+                          <option>Curso Pedagogia Dinâmica - 10 Junho de 2016 @ Paróquia Algés</option>
                         </select>
                         
                         <h2>Pessoas a Inscrever</h2>                        

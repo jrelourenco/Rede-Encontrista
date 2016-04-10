@@ -2,8 +2,6 @@
 @import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.css);
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css);
 
-
-
 * {
   margin: 0;
   padding: 0;
@@ -222,6 +220,14 @@ body, input, button {
 	text-decoration: none;
 }
 
+.cbp-spmenu .admin-option {
+    background: rgb(71, 93, 218);
+}
+
+.cbp-spmenu .admin-option:hover {
+    background: #1C2C88;
+}
+
 /* Orientation-dependent styles for the content of the menu */
 
 .cbp-spmenu-vertical {
@@ -406,7 +412,7 @@ a:hover {
 
 .main > section {
 	/* max-width: 260px; */
-	width: 90%;
+	width: 100%;
 	margin: 0 auto;
 }
 
@@ -448,11 +454,16 @@ a:hover {
     /* min-width: 500px; */
 }
 
+
 .main > section .input-group-addon {
     padding-right: 200px;
     max-width: 200px;
     color: #FFF;
     background-color: rgba(0,0,0,.075);
+}
+
+.main > section .date .input-group-addon {
+    padding-right: 10px;
 }
 
 .icon-profile:before, 
@@ -489,6 +500,10 @@ a:hover {
 
 .table {
     margin: 0px auto; 
+}
+
+.table a {
+    color: #333;
 }
 .table td {
     background: #fff;
