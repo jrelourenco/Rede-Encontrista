@@ -62,5 +62,36 @@
                 </section>
         </div>
     </div>
+    
+    <?php
+        define("DB_NAME", "rede_encontr_bd");
+        define("DB_USER", "root");
+        define("DB_PASS", "");
+        define("DB_HOST", "localhost");
+
+        //-----------CONECAO E SELECAO DA BASE DE DADOS-------------
+        $link=mysql_connect(DB_HOST, DB_USER, DB_PASS);
+            if (!$link)
+                die("Impossivel realizar a conecção ".mysql_error());
+
+        $db_selected=mysql_select_db(DB_NAME, $link);
+            if (!$db_selected)
+                die("Impossivel de usar ".DB_NAME.": ".mysql_error());
+        //-----------------------------------------------------------
+
+        //----------------INTRODUCAO DOS VALORES---------------------
+        $vnome=$_POST["nome"];
+        $valcunha=$_POST["alcunha"];
+        $vdata_nascimento=$_POST["data_nascimento"];
+        $vmorada=$_POST["morada"];
+        $vcpostal=$_POST["cod_postal"];
+
+        $sql="INSERT INTO encontrista(nome, alcunha, data_nascimento, morada, cod_postal) VALUES ("$vnome, $valcunha, $vdata_nascimento, $vmorada, $vcpostal")";
+            if(!mysql_query($sql))
+                die("Erro: ".mysql_error());
+        //-----------------------------------------------------------
+            
+        mysql_close();
+    ?>
 </body>
 </html>
