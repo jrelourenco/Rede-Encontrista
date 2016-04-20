@@ -57,7 +57,7 @@
                             <input type="text" class="form-control" value="2620-123" disabled name="cod_postal">
                         </div>
                         <!-- Login Button -->
-                        <button type="submit" class="float" visibility="hidden">Editar</button>
+                        <button type="submit" class="float">Editar</button>
                     </form>
                 </section>
         </div>
