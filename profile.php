@@ -16,13 +16,13 @@
                         <!-- Email Field -->
                         <div class="input-group input-group-lg">
                             <span class="input-group-addon">Email</span>
-                            <input type="text" class="form-control" value="joao@shalom.pt" disabled>
+                            <input type="text" class="form-control" value="joao@shalom.pt" disabled name="email">
                         </div>
 
                         <!-- Password Field -->
                         <div class="input-group input-group-lg">
                             <span class="input-group-addon">Password</span>
-                            <input type="password" class="form-control" value="*******" disabled>
+                            <input type="password" class="form-control" value="*******" disabled name="password">
                         </div>
                         
                         <h2>Dados de Pessoais</h2>
@@ -30,34 +30,34 @@
                         <!-- Name -->
                         <div class="input-group input-group-lg">
                             <span class="input-group-addon">Nome</span>
-                            <input type="text" class="form-control" value="João Nascimento do Carmo" disabled>
+                            <input type="text" class="form-control" value="João Nascimento do Carmo" disabled name="nome">
                         </div>
                         
                         <!-- Nickname -->
                         <div class="input-group input-group-lg">
                             <span class="input-group-addon">Alcunha</span>
-                            <input type="text" class="form-control" value="Jonas" disabled>
+                            <input type="text" class="form-control" value="Jonas" disabled name="alcunha">
                         </div>
 
                         <!-- Birthday Field -->
                         <div class="input-group input-group-lg">
                             <span class="input-group-addon">Data de Nascimento</span>
-                            <input type="text" class="form-control" value="25/12/1980" disabled>
+                            <input type="text" class="form-control" value="25/12/1980" disabled name="data_nascimento">
                         </div>
                         
                         <!-- Address -->
                         <div class="input-group input-group-lg">
                             <span class="input-group-addon">Morada</span>
-                            <input type="text" class="form-control" value="Rua Fernão Magalhães nº5 3Esq" disabled>
+                            <input type="text" class="form-control" value="Rua Fernão Magalhães nº5 3Esq" disabled name="morada">
                         </div>
                         
                         <!-- Postal Code -->
                         <div class="input-group input-group-lg">
                             <span class="input-group-addon">Código Postal</span>
-                            <input type="text" class="form-control" value="2620-123" disabled>
+                            <input type="text" class="form-control" value="2620-123" disabled name="cod_postal">
                         </div>
                         <!-- Login Button -->
-                        <button type="submit" class="float">Editar</button>
+                        <button type="submit" class="float" visibility="hidden">Editar</button>
                     </form>
                 </section>
         </div>
