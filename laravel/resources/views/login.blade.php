@@ -7,7 +7,7 @@ Rede Encontristaas: Perfil
     <div class="heading">
     <h2>Rede Encontristas</h2>
     <h3>Bem vindo! Insere as credenciais para entrares</h3>
-        <form action="../../../index.php" method="post">
+        <form action="../../../mockups/index.php" method="post">
         <!-- Username Field -->
         <div class="input-group input-group-lg">
             <span class="input-group-addon"><i class="fa fa-user"></i></span>

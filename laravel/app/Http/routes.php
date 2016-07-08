@@ -13,12 +13,23 @@
 
 use App\Encontrista;
 
-Route::get('/', function () {
-    return view('welcome');
+
+
+Route::get('/profile', function () {
+    return view('profile');
+
+});
+Route::get('/login', function () {
+    return view('login');
+
 });
 
-Route::get('/encontrista', function () {
-    $encontrista = Encontrista::find(1);
-    return view('profile', ['name' => $encontrista]);
+Route::get('/subscribe', function () {
+    return view('subscribef');
+
+});
+
+Route::get('/contact', function () {
+    return view('contact');
 
 });

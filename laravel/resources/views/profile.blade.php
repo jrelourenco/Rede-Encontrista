@@ -6,7 +6,7 @@
     <section>
         <form action="index.php" method="post">
             <h2>Dados de Login</h2>
-            {{$name->nome}}
+
                     <!-- Email Field -->
             <div class="input-group input-group-lg">
                 <span class="input-group-addon"><i class="fa fa-user"></i></span>

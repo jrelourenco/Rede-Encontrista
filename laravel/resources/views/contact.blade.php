@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="pt">
-<?php include 'html-head.php'; ?>
-<body>
-    <?php include 'html-menu.php'; ?>
-    <div class="container">
-        <header class="clearfix">
-            <h1>Contactos</h1>
-            <?php include 'html-header-nav.php'; ?>
-        </header>
+@extends('layout.master')
+@section('title')
+    Rede Encontristaas: Perfil
+@stop
+@section('main')
             <div class="main">
                 <section>
                     <form action="contacts.php" method="post">
@@ -83,6 +78,4 @@
                     </form>
                 </section>
         </div>
-    </div>
-</body>
-</html>
+@stop
