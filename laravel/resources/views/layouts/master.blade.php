@@ -13,20 +13,30 @@
 </head>
 <body>
 
-    @section('sidebar')
-        @include('layouts.sidebar')
-    @show
+@section('sidebar')
+    @include('layouts.sidebar')
+@show
 
 <div class="container">
+
 
     <header class="clearfix">
         <h1>O teu Perfil</h1>
         <nav>
-            <a href="profile" class="icon-profile" data-info="user profile">Ver Perfil</a>
-            <a href="logout" class="icon-logout" data-info="logout">Logout</a>
+            <ul class="navbar-right">
+                @if (Auth::check())
+                    @include('layouts.button', ['url' => 'profile','icon'=>'log-out'])
+                    @include('layouts.button', ['url' => 'logout','icon'=>'lock'])
+                @else
+
+                    @include('layouts.button', ['url' => 'login','icon'=>'log-in'])
+                @endif
+
+            </ul>
         </nav>
     </header>
-    @endif
+
+
     <div class="main">
         @yield('main')
     </div>

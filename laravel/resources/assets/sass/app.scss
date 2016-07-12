@@ -1,8 +1,8 @@
-  @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700);
 @import "variables";
+
+$icon-font-path: "/fonts/";
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
-
-
 html, body {
   height: 100%;
 }
@@ -10,6 +10,26 @@ html, body {
 body {
   background: url("/images/background.jpg") center;
   background-size: cover;
+
+}
+
+.btn-circle {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 15px;
+  line-height: 1.85;
+  border-radius: 20px;
+  color: #47a3da;
+
+}
+
+.btn-circle:hover {
+  color: #FFF;
+  border: 4px white solid;
+  line-height: 1.5;
+  background: #47a3da !important;
 
 }
 
