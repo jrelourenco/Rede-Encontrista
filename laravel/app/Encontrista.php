@@ -2,9 +2,10 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
 
-class Encontrista extends Model
+use Illuminate\Foundation\Auth\User as Authenticatable;
+
+class Encontrista extends Authenticatable
 {
     protected $table = 'encontrista';
     protected $primaryKey = 'id_encontrista';

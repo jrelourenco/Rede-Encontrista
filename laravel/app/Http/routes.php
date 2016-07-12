@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 });
 Route::get('/login', function () {
-    return view('login');
+    return view('auth.login');
 
 });
 
@@ -33,3 +33,7 @@ Route::get('/contact', function () {
     return view('contact');
 
 });
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
