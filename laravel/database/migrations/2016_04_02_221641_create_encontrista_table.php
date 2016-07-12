@@ -20,6 +20,10 @@ class CreateEncontristaTable extends Migration
             $table->time('data_nascimento');
             $table->string('morada');
             $table->string('cod_postal');
+            $table->string('email')->unique();
+            $table->string('password');
+            $table->rememberToken();
+
         });
     }
 
