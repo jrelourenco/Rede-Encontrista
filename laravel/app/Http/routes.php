@@ -15,8 +15,8 @@ use App\Encontrista;
 
 
 
-Route::get('/profile', function () {
-    return view('profile');
+Route::get('/', function () {
+    return view('home');
 
 });
 Route::get('/login', function () {

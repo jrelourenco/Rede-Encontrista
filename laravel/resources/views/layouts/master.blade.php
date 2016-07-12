@@ -13,7 +13,7 @@
 <body>
 <div class="menu">
     @section('sidebar')
-        @include('layout.sidebar')
+        @include('layouts.sidebar')
     @show
 </div>
 <div class="container">
