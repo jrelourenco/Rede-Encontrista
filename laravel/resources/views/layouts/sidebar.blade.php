@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default sidebar" role="navigation">
+<nav class="navbar navbar-default sidebar col-lg-2" role="navigation">
 
     <ul class="nav navbar-nav">
         <li class="title">Menu</li>

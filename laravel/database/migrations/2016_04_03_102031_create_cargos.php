@@ -17,9 +17,9 @@ class CreateCargos extends Migration
             $table->integer('id_encontrista')->unsigned();
             $table->integer('cargo')->unsigned();
             $table->integer('grupo')->unsigned();
-            $table->foreign('id_encontrista')->references('id_encontrista')->on('encontrista');
-            $table->foreign('cargo')->references('id_tipo')->on('tipo_cargos');
-            $table->foreign('grupo')->references('id_grupo')->on('grupos');
+            $table->foreign('id_encontrista')->references('id')->on('encontrista');
+            $table->foreign('cargo')->references('id')->on('tipo_cargos');
+            $table->foreign('grupo')->references('id')->on('grupos');
 
         });
     }

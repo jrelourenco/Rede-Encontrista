@@ -1,16 +1,12 @@
 
 nav.sidebar {
-  width: 200px;
-  height: 100%;
-  margin-left: 0px;
-
-  float: left;
-  margin-bottom: 0px;
+  padding: 0;
+  border-radius: 0;
+  margin: 0;
   li.title {
     color: #afdefa;
     font-size: 1.9em;
     padding: 18px;
-
     background: #0d77b6;
   }
   li {

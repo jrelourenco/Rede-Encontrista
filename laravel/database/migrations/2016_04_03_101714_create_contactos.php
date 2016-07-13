@@ -18,8 +18,8 @@ class CreateContactos extends Migration
             $table->integer('tipo_contacto')->unsigned();
             $table->string('contacto');
             $table->string('descricao');
-            $table->foreign('id_encontrista')->references('id_encontrista')->on('encontrista');
-            $table->foreign('tipo_contacto')->references('id_tipo')->on('tipo_contacto');
+            $table->foreign('id_encontrista')->references('id')->on('encontrista');
+            $table->foreign('tipo_contacto')->references('id')->on('tipo_contacto');
         });
     }
 

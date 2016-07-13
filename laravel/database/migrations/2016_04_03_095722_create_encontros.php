@@ -13,7 +13,7 @@ class CreateEncontros extends Migration
     public function up()
     {
         Schema::create('encontros', function (Blueprint $table) {
-            $table->increments('id_encontro');
+            $table->increments('id');
             $table->string('lugar');
             $table->dateTime('data_inicio');
             $table->dateTime('data_final');
@@ -22,7 +22,7 @@ class CreateEncontros extends Migration
 
 
 
-            $table->foreign('id_tipo')->references('id_tipo')->on('tipo_encontro');
+            $table->foreign('id_tipo')->references('id')->on('tipo_encontros');
         });
     }
 

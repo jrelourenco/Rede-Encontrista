@@ -12,10 +12,11 @@ class CreateTipoEncontro extends Migration
      */
     public function up()
     {
-        Schema::create('tipo_encontro', function (Blueprint $table) {
-            $table->increments('id_tipo');
+        Schema::create('tipo_encontros', function (Blueprint $table) {
+            $table->increments('id');
+            $table->timestamps();
             $table->string('nome_encontro');
-            $table->string('tipo_encontro');
+            $table->string('tipo_encontros');
             $table->string('morada');
             $table->string('descricao');
         });
@@ -28,6 +29,6 @@ class CreateTipoEncontro extends Migration
      */
     public function down()
     {
-        Schema::drop('tipo_encontro');
+        Schema::drop('tipo_encontros');
     }
 }

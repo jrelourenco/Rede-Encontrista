@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use \App\Encontrista;
 
 class AdminUserSeed extends Seeder
 {
@@ -11,7 +12,7 @@ class AdminUserSeed extends Seeder
      */
     public function run()
     {
-        \App\Encontrista::create([
+        Encontrista::create([
             'nome' => 'rede_encontrista',
             'email' => 'redencontrista@shalom.pt',
             'alcunha' => 'admin',

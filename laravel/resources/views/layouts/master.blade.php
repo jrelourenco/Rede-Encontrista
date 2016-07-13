@@ -17,18 +17,16 @@
     @include('layouts.sidebar')
 @show
 
-<div class="container">
+<div class="col-lg-10">
 
 
-    <header class="clearfix">
-        <h1>O teu Perfil</h1>
-        <nav>
+    <header >
+            <nav>
             <ul class="navbar-right">
                 @if (Auth::check())
                     @include('layouts.button', ['url' => 'profile','icon'=>'log-out'])
                     @include('layouts.button', ['url' => 'logout','icon'=>'lock'])
                 @else
-
                     @include('layouts.button', ['url' => 'login','icon'=>'log-in'])
                 @endif
 
@@ -37,9 +35,9 @@
     </header>
 
 
-    <div class="main">
+    <main class="main">
         @yield('main')
-    </div>
+    </main>
 </div>
 </body>
 </html>

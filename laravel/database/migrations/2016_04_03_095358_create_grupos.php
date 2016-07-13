@@ -13,11 +13,12 @@ class CreateGrupos extends Migration
     public function up()
     {
         Schema::create('grupos', function (Blueprint $table) {
-            $table->increments('id_grupo');
+            $table->increments('id');
             $table->string('designacao');
             $table->string('localizacao');
             $table->dateTime('data_criacao');
-            $table->dateTime('data_inativacao');
+            $table->dateTime('data_inativacao')->nullable();
+            $table->timestamps();
 
         });
     }

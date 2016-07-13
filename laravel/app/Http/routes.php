@@ -14,15 +14,11 @@
 use App\Encontrista;
 
 
-
 Route::get('/', function () {
     return view('home');
 
 });
-Route::get('/login', function () {
-    return view('auth.login');
 
-});
 
 Route::get('/subscribe', function () {
     return view('subscribef');
@@ -35,5 +31,12 @@ Route::get('/contact', function () {
 });
 
 Route::auth();
+Route::get('/login', function () {
+    return view('login');
 
+});
 Route::get('/home', 'HomeController@index');
+Route::get('/admin/grupos', function () {
+    return view("admin.grupos", ['grupos' => \App\Grupo::all()]);
+
+});

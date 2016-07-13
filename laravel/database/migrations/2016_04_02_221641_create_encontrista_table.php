@@ -13,7 +13,7 @@ class CreateEncontristaTable extends Migration
     public function up()
     {
         Schema::create('encontrista', function (Blueprint $table) {
-            $table->increments('id_encontrista');
+            $table->increments('id');
             $table->timestamps();
             $table->string('nome');
             $table->string('alcunha');

@@ -13,7 +13,7 @@ class CreateTipoCargos extends Migration
     public function up()
     {
         Schema::create('tipo_cargos', function (Blueprint $table) {
-            $table->increments('id_tipo');
+            $table->increments('id');
             $table->string('nome_cargo');
 
         });

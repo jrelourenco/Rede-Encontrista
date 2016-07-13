@@ -21,8 +21,8 @@ class CreateEncontristasEncontros extends Migration
             $table->string('participated');
             $table->boolean('payed');
 
-            $table->foreign('id_encontrista')->references('id_encontrista')->on('encontrista');
-            $table->foreign('id_encontro')->references('id_encontro')->on('encontros');
+            $table->foreign('id_encontrista')->references('id')->on('encontrista');
+            $table->foreign('id_encontro')->references('id')->on('encontros');
         });
     }
 

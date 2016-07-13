@@ -13,7 +13,7 @@ class CreateTipoContacto extends Migration
     public function up()
 {
     Schema::create('tipo_contacto', function (Blueprint $table) {
-        $table->increments('id_tipo');
+        $table->increments('id');
         $table->string('tipo');
 
     });
