@@ -12,17 +12,19 @@ class CreateEncontristasEncontros extends Migration
      */
     public function up()
     {
-        Schema::create('encontristas_encontros', function (Blueprint $table) {
-            $table->integer('id_encontrista')->unsigned();
-            $table->integer('id_encontro')->unsigned();
-            $table->primary(['id_encontrista', 'id_encontro']);
-            $table->string('role');
-            $table->string('subscriber');
-            $table->string('participated');
-            $table->boolean('payed');
+        Schema::create('encontrista_encontro', function (Blueprint $table) {
+            $table->integer('encontrista_id')->unsigned();
+            $table->integer('encontro_id')->unsigned();
+            $table->timestamps();
+            $table->primary(['encontro_id', 'encontrista_id']);
+            $table->enum('role',['participante','animador','exterior'])->default('participante');
+            $table->integer('subscriber')->unsigned();
+            $table->boolean('participated')->default(false);
+            $table->boolean('payed')->default(false);
 
-            $table->foreign('id_encontrista')->references('id')->on('encontrista');
-            $table->foreign('id_encontro')->references('id')->on('encontros');
+            $table->foreign('encontrista_id')->references('id')->on('encontrista');
+            $table->foreign('subscriber')->references('id')->on('encontrista');
+            $table->foreign('encontro_id')->references('id')->on('encontros');
         });
     }
 
@@ -33,6 +35,6 @@ class CreateEncontristasEncontros extends Migration
      */
     public function down()
     {
-        Schema::drop('encontristas_encontros');
+        Schema::drop('encontrista_encontro');
     }
 }

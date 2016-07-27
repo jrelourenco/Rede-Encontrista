@@ -14,6 +14,7 @@ class CreateEncontros extends Migration
     {
         Schema::create('encontros', function (Blueprint $table) {
             $table->increments('id');
+            $table->timestamps();
             $table->string('lugar');
             $table->dateTime('data_inicio');
             $table->dateTime('data_final');
