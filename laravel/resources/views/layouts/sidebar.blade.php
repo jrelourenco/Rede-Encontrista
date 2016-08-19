@@ -1,44 +1,34 @@
-<nav class="navbar navbar-default sidebar col-lg-2" role="navigation">
-
-    <ul class="nav navbar-nav">
-        <li class="title">Menu</li>
-        <li><a href="{{ URL::to('') }}">Início</a></li>
-        <li><a href="{{ URL::to('profile') }}">Perfil</a></li>
-        <li><a href="{{ URL::to('curriculum') }}">Currículo</a></li>
-        <li><a href="{{ URL::to('calendar') }}">Calendário</a></li>
-        <li><a href="{{ URL::to('subscribe') }}">Inscrições</a></li>
-        <li><a href="{{ URL::to('contact') }}">Contactos</a></li>
+<nav id="sidebar" class="navbar navbar-default navbar-fixed-left nav-stacked" role="navigation">
+    <ul id="sidebar-menu"class="nav navbar-nav">
+        <h3 class="navbar-title">Menu</h3>
+        @Perm('sidebar.home')
+        <li><a href="{{ URL::route('home') }}">Início</a></li>@endPerm
+        @Perm('sidebar.profile')
+        <li><a href="{{ URL::to('profile') }}">Perfil</a></li>@endPerm
+        @Perm('sidebar.curriculum')
+        <li><a href="{{ URL::to('curriculum') }}">Currículo</a></li>@endPerm
+        @Perm('sidebar.calendar')
+        <li><a href="{{ URL::to('calendar') }}">Calendário</a></li>@endPerm
+        @Perm('sidebar.subscribe')
+        <li><a href="{{ URL::route('meetings.index') }}">Inscrições</a></li>@endPerm
+        @Perm('sidebar.contact')
+        <li><a href="{{ URL::to('contact') }}">Contactos</a></li>@endPerm
+        @Perm('sidebar.admin.course')
+        <li class="admin"><a href="{{ URL::route('admin.meetings.index') }}">Gerir cursos</a></li>@endPerm
+        @Perm('sidebar.admin.group')
+        <li class="admin"><a href="{{ URL::route('admin.group.index') }}">Gerir Grupos</a></li>@endPerm
     </ul>
 </nav>
-<!--
-<nav class="navbar navbar-default sidebar" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="sidebar-menu">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
         </div>
-        <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Usuarios <span class="caret"></span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a>
-                    <ul class="dropdown-menu forAnimate" role="menu">
-                        <li><a href="{{URL::to('createusuario')}}">Crear</a></li>
-                        <li><a href="#">Modificar</a></li>
-                        <li><a href="#">Reportar</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Informes</a></li>
-                    </ul>
-                </li>
-                <li ><a href="#">Libros<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-th-list"></span></a></li>
-                <li ><a href="#">Tags<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-tags"></span></a></li>
-            </ul>
-        </div>
+
     </div>
-</nav>-->
+</nav>

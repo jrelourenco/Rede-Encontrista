@@ -1,7 +1,10 @@
 @extends('layouts.master')
 @section('title')
     Rede Encontristaas: Perfil
-@stop
+@endsection
+@section('page-title')
+    Login na Rede Encotnrista
+@endsection
 @section('main')
     <div class="login-form" >
         <div class="heading col-lg-4 col-lg-offset-4 text-center">
