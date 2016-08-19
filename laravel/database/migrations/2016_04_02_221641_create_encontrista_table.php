@@ -12,7 +12,7 @@ class CreateEncontristaTable extends Migration
      */
     public function up()
     {
-        Schema::create('encontrista', function (Blueprint $table) {
+        Schema::create('encontristas', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
             $table->string('nome');
@@ -34,6 +34,6 @@ class CreateEncontristaTable extends Migration
      */
     public function down()
     {
-        Schema::drop('encontrista');
+        Schema::drop('encontristas');
     }
 }
