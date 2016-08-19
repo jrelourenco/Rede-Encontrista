@@ -6,8 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Grupo extends Model
 {
-    function isAtivo()
+
+    protected $appends = array('active');
+
+    public function getActiveAttribute()
     {
-        return $this->dataInativaçao != null ? 'TRUE' : 'FALSE';
+        return is_null($this->data_inativacao) ? true : false;
     }
+
+    
 }
