@@ -1,0 +1,27 @@
+{
+  "name": "rede_encontrista",
+  "description": "",
+  "main": "",
+  "authors": [
+    "jrel <jrelourenco@outlook.pt>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/R3Moura/Rede-Encontrista",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "3.1.0",
+    "angular": "1.5.8",
+    "angular-ui-bootstrap": "2.0.2",
+    "moment": "2.14.1",
+    "angular-bootstrap-calendar": "0.23.0",
+    "components-font-awesome": "^4.6.3",
+    "angular-i18n": "^1.5.8"
+  }
+}
