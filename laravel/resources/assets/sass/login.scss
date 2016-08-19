@@ -1,14 +1,9 @@
-.login-form {
-  color: #FFF;
-  padding: 15px;
+form.login {
 
-  margin-top: 2%;
+}
 
-  text-shadow: 1px 1px 3px #23203b;
-  h2 {
-    font-size: 3em;
-    font-weight: 400;
-    display: inline-block;
-    padding-bottom: 5px;
-  }
+input:-webkit-autofill {
+  -webkit-box-shadow: transparent !important;
+  background-color: transparent;
+  outline: none;
 }
