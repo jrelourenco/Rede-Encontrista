@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -13,7 +14,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Blade::directive('Perm', function ($permission) {
+            return '<?php if((Auth::check()&&\App\Permission::permission(' . $permission . ', Auth::user()->id))||(!Auth::check()&&\App\Permission::guest(' . $permission . '))): ?>';
+        });
+        Blade::directive('endPerm', function () {
+            return '<?php endif; ?>';
+        });
     }
 
     /**
@@ -23,6 +29,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        //ngb
     }
 }
