@@ -8,6 +8,6 @@
     <meta name="keywords" content="shalom rede cursos" />
     <meta name="author" content="Codrops" />
     <link rel="shortcut icon" href="../laravel/public/images/favicon.png">
-    <link rel="stylesheet" type="text/css" href="../laravel/public/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
 
 </head>
