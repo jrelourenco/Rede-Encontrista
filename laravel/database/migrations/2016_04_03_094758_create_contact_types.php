@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTipoContacto extends Migration
+class CreateContactTypes extends Migration
 {
     /**
      * Run the migrations.
@@ -12,9 +12,9 @@ class CreateTipoContacto extends Migration
      */
     public function up()
 {
-    Schema::create('tipo_contacto', function (Blueprint $table) {
+    Schema::create('contact_types', function (Blueprint $table) {
         $table->increments('id');
-        $table->string('tipo');
+        $table->string('type');
 
     });
 }
@@ -26,6 +26,6 @@ class CreateTipoContacto extends Migration
      */
     public function down()
     {
-        Schema::drop('tipo_contacto');
+        Schema::drop('contact_types');
     }
 }

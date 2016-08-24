@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEncontristaTable extends Migration
+class CreateEncontristasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,11 +15,11 @@ class CreateEncontristaTable extends Migration
         Schema::create('encontristas', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->string('nome');
-            $table->string('alcunha');
-            $table->time('data_nascimento');
-            $table->string('morada');
-            $table->string('cod_postal');
+            $table->string('name');
+            $table->string('nickname');
+            $table->time('birth_date');
+            $table->string('address');
+            $table->string('postal_code');
             $table->string('email')->unique();
             $table->string('password');
             $table->rememberToken();

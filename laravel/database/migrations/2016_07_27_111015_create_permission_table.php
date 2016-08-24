@@ -19,7 +19,7 @@ class CreatePermissionTable extends Migration
             $table->string('permission');
 
             $table->unique(['encontrista_id', 'permission']);
-            $table->foreign('encontrista_id')->references('id')->on('encontrista');
+            $table->foreign('encontrista_id')->references('id')->on('encontristas');
         });
     }
 

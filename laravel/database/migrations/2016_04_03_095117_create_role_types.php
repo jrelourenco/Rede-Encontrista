@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTipoEncontro extends Migration
+class CreateRoleTypes extends Migration
 {
     /**
      * Run the migrations.
@@ -12,13 +12,10 @@ class CreateTipoEncontro extends Migration
      */
     public function up()
     {
-        Schema::create('tipo_encontros', function (Blueprint $table) {
+        Schema::create('role_types', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
-            $table->string('nome_encontro');
-            $table->string('tipo_encontros');
-            $table->string('morada');
-            $table->string('descricao');
+            $table->string('name');
+
         });
     }
 
@@ -29,6 +26,6 @@ class CreateTipoEncontro extends Migration
      */
     public function down()
     {
-        Schema::drop('tipo_encontros');
+        Schema::drop('role_types');
     }
 }

@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTipoCargos extends Migration
+class CreateMeetingTypes extends Migration
 {
     /**
      * Run the migrations.
@@ -12,10 +12,13 @@ class CreateTipoCargos extends Migration
      */
     public function up()
     {
-        Schema::create('tipo_cargos', function (Blueprint $table) {
+        Schema::create('meeting_types', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nome_cargo');
-
+            $table->timestamps();
+            $table->string('name');
+            $table->string('type');
+            $table->string('address');
+            $table->string('description');
         });
     }
 
@@ -26,6 +29,6 @@ class CreateTipoCargos extends Migration
      */
     public function down()
     {
-        Schema::drop('tipo_cargos');
+        Schema::drop('meeting_types');
     }
 }
