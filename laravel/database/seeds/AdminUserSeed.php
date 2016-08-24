@@ -13,9 +13,9 @@ class AdminUserSeed extends Seeder
     public function run()
     {
         Encontrista::create([
-            'nome' => 'rede_encontrista',
+            'name' => 'rede_encontrista',
             'email' => 'redencontrista@shalom.pt',
-            'alcunha' => 'admin',
+            'nickname' => 'admin',
             'password' => bcrypt('qwe1234R')
         ]);
     }
