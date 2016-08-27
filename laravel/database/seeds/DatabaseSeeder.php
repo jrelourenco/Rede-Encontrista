@@ -14,5 +14,7 @@ class DatabaseSeeder extends Seeder
         $this->call(AdminUserSeed::class);
         $this->call(GroupSeed::class);
         $this->call(MeetingTypeSeed::class);
+        $this->call(RoleTypeSeed::class);
+        $this->call(EncontristaSeed::class);
     }
 }

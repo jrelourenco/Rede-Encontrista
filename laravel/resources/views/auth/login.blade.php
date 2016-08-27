@@ -16,7 +16,7 @@
                 <div class="col-md-6 col-md-offset-3">
                     <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                         <div class="input-group input-group-lg">
-                            <span class="input-group-addon"><span class="fa fa-user"></span></span>
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
                             <input type="text" class="form-control" placeholder="Email" name="email"
                                    value="{{ old('email') }}">
                         </div>
@@ -28,7 +28,7 @@
                     </div>
                     <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                         <div class="input-group input-group-lg">
-                            <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
                             <input type="password" class="form-control" placeholder="Password" name="password">
                         </div>
                         @if ($errors->has('password'))

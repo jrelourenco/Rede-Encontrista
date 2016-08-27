@@ -17,7 +17,7 @@ class CreateEncontristasTable extends Migration
             $table->timestamps();
             $table->string('name');
             $table->string('nickname');
-            $table->time('birth_date');
+            $table->date('birth_date');
             $table->string('address');
             $table->string('postal_code');
             $table->string('email')->unique();

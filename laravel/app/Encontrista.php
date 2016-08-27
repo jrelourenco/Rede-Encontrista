@@ -3,6 +3,7 @@
 namespace App;
 
 
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use  Illuminate\Database\Query\Builder;
 
@@ -10,12 +11,28 @@ class Encontrista extends Authenticatable
 {
 
 
-    public function encontros()
+    public function meetings()
     {
-        return $this->belongsToMany(Encontro::class)->withPivot(['encontrista_id', 'encontro_id', 'created_at', 'updated_at', 'role', 'subscriber', 'participated', 'payed']);
+        return $this->belongsToMany(Meeting::class)->withPivot([
+            'role',
+            'subscriber_id',
+            'participated',
+            'payed'
+        ]);
     }
 
     protected $hidden = [
-        'password', 'remember_token',
+        'password', 'remember_token', "created_at", "updated_at",
     ];
+
+
+    public function newPivot(Model $parent, array $attributes, $table, $exists)
+    {
+        return new EncontristaMeeting($parent, $attributes, $table, $exists);
+    }
+
+    public function roles()
+    {
+        return $this->hasMany(Role::class);
+    }
 }

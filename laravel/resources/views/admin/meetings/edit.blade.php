@@ -37,7 +37,7 @@
                     <div class="col-md-9">
                         <div class='input-group' id='datetimepicker6'>
                             <input type='text' name="data_inicio" class="form-control"/>
-                            <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
                         </div>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
                     <div class="col-md-9">
                         <div class='input-group date'>
                             <input name="date_final" type='text' class="form-control col-md9"/>
-                            <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
                         </div>
                     </div>
                 </div>

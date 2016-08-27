@@ -14,8 +14,12 @@
 use App\Encontrista;
 use App\Http\Controllers\CourseController;
 
-
+Route::get('/teste', function(){
+    return view("teste");
+});
 Route::get('/home', ['as' => 'home', 'uses' => 'HomeController@index']);
+
+Route::auth();
 
 Route::group(
     [
@@ -30,10 +34,12 @@ Route::group(
                 'prefix' => 'json',
             ],
             function () {
-                Route::get('{id}', ['as' => 'info', 'uses' => 'CourseController@meeting']);
+                Route::get('{id}/{encotnrista?}', ['as' => 'info', 'uses' => 'CourseController@meeting']);
                 Route::get('', ['as' => 'list', 'uses' => 'CourseController@meetings']);
 
             });
+
+
         Route::get('', ['as' => 'index', 'uses' => 'CourseController@index']);
 
         Route::get('{id}/subscribe', ['as' => 'subscribe', 'uses' => 'CourseController@subscribe']);
@@ -44,6 +50,8 @@ Route::group(
     }
 );
 
+
+// ADMIN GROUP
 Route::group(
     [
         'as' => 'admin.',
@@ -51,53 +59,37 @@ Route::group(
         'middleware' => 'auth',
     ],
     function () {
+        //MEETING GROUP
         Route::group(
             [
                 'as' => 'meetings.',
-                'prefix' => 'course',
+                'prefix' => 'meetings',
             ],
             function () {
                 Route::get('', ['as' => 'index', 'uses' => 'CourseController@admin_index']);
-                Route::get('info/{encontro}', ['as' => 'info', 'uses' => 'CourseController@adminCourseInfo']);
+                Route::get('info/{id}/', ['as' => 'info', 'uses' => 'CourseController@adminCourseInfo']);
                 Route::get('edit', ['as' => 'new', 'uses' => 'CourseController@adminEditCourse']);
                 Route::get('edit/{id}', ['as' => 'edit', 'uses' => 'CourseController@adminEditCourse']);
 
             });
-        Route::group(
-            [
-                'as' => 'group.',
-                'prefix' => 'group',
-            ],
-            function () {
-                Route::group(
-                    [
-                        'as' => 'json.',
-                        'prefix' => 'josn',
-                    ],
-                    function () {
-                        Route::get('list', ['as' => 'list', 'uses' => function () {
-                            return response()->json(['groups' => \App\Grupo::all()]);
-                        }]);
-                        Route::get('{id}', ['as' => 'info', 'uses' => function ($id) {
-                            return response()->json(['group' => \App\Grupo::findOrfail($id)]);
-                        }]);
-                    });
 
-                Route::get('', ['as' => 'index', 'uses' => function () {
-                    return view("admin.grupos");
-                }]);
-            });
+
+        Route::get('group', ['as' => 'group.index', 'uses' => function () {
+            return view("admin.groups.index");
+        }]);
+
+        Route::get('group/modal', ['as' => 'group.modal', 'uses' => function () {
+            return view("admin.groups.modal");
+        }]);
     }
 );
 
-Route::get('/contact', function () {
-    return view('contact');
 
-});
-
-Route::auth();
-
-
-Route::get('config/{config}', function ($config) {
-    dd(Config::get($config));
-});
+Route::group(
+    [
+        'prefix' => 'admin/json',
+    ],
+    function () {
+        Route::resource('group', 'GroupController', ['except' => ['create'],]);
+    }
+);

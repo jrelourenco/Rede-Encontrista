@@ -11,27 +11,43 @@ var elixir = require('laravel-elixir');
  |
  */
 
-jsPublicPath = 'resources/assets/js/public';
-cssPublicPath = 'resources/assets/css';
-fontPublicPath = 'public/fonts/';
+var COMPILED = true;
+
+
+/////////////////////
+var min = COMPILED ? ".min" : "";
+var vendorPath = 'bower_components/';
+var vendorPathHack = "../../../";
+var publicPath = 'public/';
+var jsPublicPath = publicPath + "js/";
+var fontPublicPath = publicPath + "fonts";
+
 elixir.config.sourcemaps = false;
 
 elixir(function (mix) {
-   
+
     mix.sass('app.scss');
-    
-    mix.copy('node_modules/jquery/jquery.js', jsPublicPath);
-    mix.copy('node_modules/bootstrap-sass/assets/javascripts/bootstrap.js', jsPublicPath);
-    mix.copy('node_modules/angular/angular.js', jsPublicPath);
 
+    mix.styles([
+        'public/css/app.css',
+        'bower_components/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch' + min + '.css'
+    ], 'public/css/app.css', './');
 
-    mix.copy('node_modules/font-awesome/fonts', fontPublicPath);
 
     mix.scripts([
-        'public/jquery.js',
-        'public/bootstrap.js',
-        'public/angular.js',
-        ]);
-    
+        vendorPathHack + vendorPath + 'jquery/dist/jquery' + min + '.js',
+        vendorPathHack + 'node_modules/bootstrap-sass/assets/javascripts/bootstrap' + min + '.js',
+        vendorPathHack + vendorPath + 'angular/angular' + min + '.js',
+        vendorPathHack + vendorPath + 'angular-i18n/angular-locale_pt-pt.js',
+        vendorPathHack + vendorPath + 'angular-bootstrap/ui-bootstrap-tpls' + min + '.js',
+        vendorPathHack + vendorPath + 'moment/min/moment-with-locales' + min + '.js',
+        vendorPathHack + vendorPath + 'angular-bootstrap-calendar/dist/js/angular-bootstrap-calendar' + min + '.js',
+        vendorPathHack + vendorPath + 'bootstrap-switch/dist/js/bootstrap-switch' + min + '.js',
+    ], jsPublicPath + "/vendor.js");
+
+    mix.copy(vendorPath + 'bootstrap/fonts/', fontPublicPath);
+
+
+    //  mix.copy('resources/assets/js/private', jsPublicPath);
 
 });

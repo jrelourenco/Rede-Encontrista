@@ -9,13 +9,13 @@
 
                     <!-- Email Field -->
             <div class="input-group input-group-lg">
-                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                 <input type="text" class="form-control" value="">
             </div>
 
             <!-- Password Field -->
             <div class="input-group input-group-lg">
-                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
                 <input type="password" class="form-control" value="*******">
             </div>
 
@@ -23,19 +23,19 @@
 
             <!-- Nome Completo -->
             <div class="input-group input-group-lg">
-                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                 <input type="text" class="form-control" value="João Nascimento do Carmo">
             </div>
 
             <!-- Alcunha -->
             <div class="input-group input-group-lg">
-                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                 <input type="text" class="form-control" value="Jonas">
             </div>
 
             <!-- Birthday Field -->
             <div class="input-group input-group-lg">
-                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                 <input type="text" class="form-control" value="25/12/1980">
             </div>
 

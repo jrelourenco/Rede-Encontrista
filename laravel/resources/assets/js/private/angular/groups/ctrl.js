@@ -1,5 +1,6 @@
 angular.module('app')
-    .controller('ctrl', ['$scope', 'serv', '$filter', function ($scope, service, $filter) {
+    .controller('ctrl', ['$scope', 'serv', '$filter','$uinModal', function ($scope, service, $filter) {
+
         service.groups().then(function (response) {
             $scope.groupsService = response.data.groups;
             $scope.$watch('search', function (value) {
@@ -17,5 +18,9 @@ angular.module('app')
             });
 
         });
+        $scope.model = function (group) {
+            alert();
+        };
+
     }]);
 

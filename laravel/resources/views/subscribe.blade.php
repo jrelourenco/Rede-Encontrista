@@ -17,7 +17,7 @@
 
                         <select class="form-control" name="meetings"
                                 ng-options="meeting | label for meeting in meetings  track by meeting.id"
-                                ng-model="meetingsSelected" ng-change="change()"></select>
+                                ng-model="meetingsSelected"></select>
 
                     </div>
                 </div>
@@ -34,7 +34,7 @@
                     <div class="form-group">
                         <label class="col-md-3 control-label" for="curso">Inicio</label>
                         <div class="col-md-7">
-                            <p class="form-control-static"> <% meeting.start_date | date:"custom"%></p>
+                            <p class="form-control-static"> <% meeting.start_date | date:"medium"%></p>
                         </div>
 
 
@@ -42,7 +42,7 @@
                     <div class="form-group">
                         <label class="col-md-3 control-label" for="curso">Fim</label>
                         <div class="col-md-6">
-                            <p class="form-control-static"> <% meeting.end_date  | date:"custom"%></p>
+                            <p class="form-control-static"> <% meeting.end_date  | date:"medium"%></p>
                         </div>
                     </div>
                     <div class="form-group">
@@ -73,7 +73,7 @@
                     <div class="form-group">
                         <label class="col-md-3 control-label" for="curso">Descrição</label>
                         <div class="col-md-9">
-                            <p class="form-control-static" ng-bind-html="meeting_type.description"></p>
+                            <p class="form-control-static" ng-bind-html="meeting.type.description"></p>
                         </div>
                     </div>
                     <div class="form-group  ">
@@ -82,11 +82,11 @@
                                 <div class="btn-group">
                                     @Perm('course.unsubscribe.me')
                                     <a ng-class="unsubscribeStateClass" class="btn btn-danger " ng-click="unsubscribe()"
-                                       role="button">Desinscrever-me</a>
+                                       role="button">Desinscrevere</a>
                                     @endPerm
                                     @Perm('course.subscribe.me')
                                     <a ng-class="subscribeStateClass" class="btn btn-success " ng-click="subscribe()"
-                                       role="button">Inscrever-me</a>
+                                       role="button">Inscrevere</a>
                                     @endPerm
                                     @Perm('course.subscribe.group')
                                     <a href="#" class="btn btn-info  " role="button">Inscrever Grupo</a>
