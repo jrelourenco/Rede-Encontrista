@@ -16,5 +16,6 @@ class DatabaseSeeder extends Seeder
         $this->call(MeetingTypeSeed::class);
         $this->call(RoleTypeSeed::class);
         $this->call(EncontristaSeed::class);
+        $this->call(MeetingSeed::class);
     }
 }

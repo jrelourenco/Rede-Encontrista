@@ -19,3 +19,11 @@ $factory->define(App\Encontrista::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+$factory->define(App\Meeting::class, function (Faker\Generator $faker) {
+    return [
+        'place' => $faker->city,
+        'start_date' => $faker->dateTime,
+        'end_date' => $faker->dateTime,
+        'type_id' => DB::table('meeting_types')->orderBy(DB::raw('RAND()'))->get()[0]->id,
+    ];
+});

@@ -14,7 +14,7 @@
 use App\Encontrista;
 use App\Http\Controllers\CourseController;
 
-Route::get('/teste', function(){
+Route::get('/teste', function () {
     return view("teste");
 });
 Route::get('/home', ['as' => 'home', 'uses' => 'HomeController@index']);
@@ -52,44 +52,55 @@ Route::group(
 
 
 // ADMIN GROUP
-Route::group(
-    [
-        'as' => 'admin.',
-        'prefix' => 'admin',
-        'middleware' => 'auth',
-    ],
-    function () {
-        //MEETING GROUP
-        Route::group(
-            [
-                'as' => 'meetings.',
-                'prefix' => 'meetings',
-            ],
-            function () {
-                Route::get('', ['as' => 'index', 'uses' => 'CourseController@admin_index']);
-                Route::get('info/{id}/', ['as' => 'info', 'uses' => 'CourseController@adminCourseInfo']);
-                Route::get('edit', ['as' => 'new', 'uses' => 'CourseController@adminEditCourse']);
-                Route::get('edit/{id}', ['as' => 'edit', 'uses' => 'CourseController@adminEditCourse']);
+Route::group([
+    'as' => 'admin.',
+    'prefix' => 'admin',
+    'middleware' => 'auth',
+], function () {
+    //MEETING GROUP
+    Route::group(
+        [
+            'as' => 'meetings.',
+            'prefix' => 'meetings',
+        ],
+        function () {
+            //Route::get('', ['as' => 'index', 'uses' => 'CourseController@admin_index']);
+            Route::get('info/{id}/', ['as' => 'info', 'uses' => 'CourseController@adminCourseInfo']);
+            Route::get('edit', ['as' => 'new', 'uses' => 'CourseController@adminEditCourse']);
+            Route::get('edit/{id}', ['as' => 'edit', 'uses' => 'CourseController@adminEditCourse']);
 
-            });
-
-
-        Route::get('group', ['as' => 'group.index', 'uses' => function () {
-            return view("admin.groups.index");
+        });
+    Route::group([
+        'as' => 'meeting.',
+        'prefix' => 'meeting',
+    ], function () {
+        Route::get('', ['as' => 'index', 'uses' => function () {
+            return view("admin.meeting.index");
         }]);
-
-        Route::get('group/modal', ['as' => 'group.modal', 'uses' => function () {
-            return view("admin.groups.modal");
+        Route::get('modal', ['as' => 'modal', 'uses' => function () {
+            return view("admin.meeting.modal");
         }]);
-    }
-);
+    });
+    Route::group([
+        'as' => 'group.',
+        'prefix' => 'group',
+    ], function () {
+        Route::get('', ['as' => 'index', 'uses' => function () {
+            return view("admin.group.index");
+        }]);
+        Route::get('modal', ['as' => 'modal', 'uses' => function () {
+            return view("admin.group.modal");
+        }]);
+    });
+});
 
-
+//REST Group
 Route::group(
     [
         'prefix' => 'admin/json',
     ],
     function () {
         Route::resource('group', 'GroupController', ['except' => ['create'],]);
+        Route::resource('meeting', 'MeetingController', ['except' => ['create'],]);
     }
 );

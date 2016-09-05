@@ -16,8 +16,8 @@ class CreateMeetings extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->string('place');
-            $table->bigInteger('start_date');
-            $table->bigInteger('end_date');
+            $table->dateTime('start_date');
+            $table->dateTime('end_date');
             $table->string('description')->nullable();
             $table->integer('type_id')->unsigned();
 

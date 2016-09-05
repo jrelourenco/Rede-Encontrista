@@ -8,7 +8,9 @@ use Illuminate\Support\Facades\DB;
 
 class Role extends Model
 {
+    protected $fillable = ['school_year', 'group_id', 'role_id'];
     protected $hidden = [
+        'id',
         'created_at',
         'updated_at',
         'role_id',
@@ -42,14 +44,15 @@ class Role extends Model
     public function getEncontristaAttribute()
     {
 
-        
-      
+
         return [
             'id' => $this->encontrista_id,
             'name' => Encontrista::find($this->encontrista_id)->name,
         ];
 
     }
+
+  
 
 
 }

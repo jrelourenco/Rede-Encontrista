@@ -1,22 +1,16 @@
 @extends('layouts.master')
-@section('title')
-    Rede Encontrista: Inscrever em curso
-@endsection
-@section('page-title')
-
-    Inscrever em curso
-@endsection
+@section('page-title') Inscrever em curso @endsection
 @section('main')
     <div class="main">
         <section ng-app="app" ng-controller="ctrl">
-            <% %>
+
             <form class="form-horizontal">
                 <div class="form-group">
                     <label class="col-md-3 control-label" for="curso">Curso</label>
                     <div class="col-md-9">
 
                         <select class="form-control" name="meetings"
-                                ng-options="meeting | label for meeting in meetings  track by meeting.id"
+                                ng-options="obj | label for obj in (objs | filter:config.filter)  track by obj.id"
                                 ng-model="meetingsSelected"></select>
 
                     </div>
@@ -27,14 +21,14 @@
                     <div class="form-group">
                         <label class="col-md-3 control-label" for="curso">Local</label>
                         <div class="col-md-7">
-                            <p class="form-control-static"> <% meeting.place%></p>
+                            <p class="form-control-static"> <% obj.place%></p>
                         </div>
 
                     </div>
                     <div class="form-group">
                         <label class="col-md-3 control-label" for="curso">Inicio</label>
                         <div class="col-md-7">
-                            <p class="form-control-static"> <% meeting.start_date | date:"medium"%></p>
+                            <p class="form-control-static"> <% obj.start_date | date:"medium"%></p>
                         </div>
 
 
@@ -42,7 +36,7 @@
                     <div class="form-group">
                         <label class="col-md-3 control-label" for="curso">Fim</label>
                         <div class="col-md-6">
-                            <p class="form-control-static"> <% meeting.end_date  | date:"medium"%></p>
+                            <p class="form-control-static"> <% meeting.end_date | date:"medium"%></p>
                         </div>
                     </div>
                     <div class="form-group">
@@ -134,18 +128,12 @@
 
 @section('javascript-asset')
 
-    <script>
-        var admin = false;
-        var urlMeetingList = "{{URL::route('meetings.json.list')}}?filter=future";
-        var urlMeetingInfo = "{{URL::route('meetings.json.info',':id')}}";
-        var urlMeetingSubscribe = "{{URL::route('meetings.subscribe',':id')}}";
-        var urlMeetingUnsubscribe = "{{URL::route('meetings.unsubscribe',':id')}}";
-    </script>
+    @include('layouts.rest_urls',[$model="meeting"])
     <script src="{{asset('js/angular/app.js')}}"></script>
-    <script src="{{asset('js/angular/meetings/serv.js')}}"></script>
+    <script src="{{asset('js/angular/meetings/values.js')}}"></script>
+    <script src="{{asset('js/angular/serv.js')}}"></script>
     <script src="{{asset('js/angular/meetings/filterLabel.js')}}"></script>
     <script src="{{asset('js/angular/meetings/ctrl.js')}}"></script>
 
 @endsection
-
 

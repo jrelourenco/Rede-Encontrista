@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Group;
 use App\Grupo;
+use App\Meeting;
 use App\Role;
 use Illuminate\Http\Request;
 
@@ -13,7 +14,7 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
 
-class GroupController extends Controller
+class MeetingController extends Controller
 {
 //TODO valores obrigtorios não defeidos e resolvidos
 
@@ -24,7 +25,7 @@ class GroupController extends Controller
      */
     public function index()
     {
-        return response()->json(Group::all());
+        return response()->json(Meeting::all());
     }
 
     /**
@@ -46,7 +47,7 @@ class GroupController extends Controller
      */
     public function show($id)
     {
-        $group = Group::findOrfail($id);
+        $group = Meeting::findOrfail($id);
         return response()->json($group);
     }
 
@@ -60,28 +61,25 @@ class GroupController extends Controller
     public function update(Request $request, $id = null)
     {
         if (is_null($id))
-            $group = new Group();
+            $obj = new Meeting();
         else
-            $group = Group::findOrfail($id);
+            $obj = Meeting::findOrfail($id);
+        //TODO: corrigir
+        /*
+                $obj->designation = Input::get('designation');
+                $obj->localization = Input::get('localization');
+                $obj->creation_date = Input::get('creation_date');
+                $obj->inactivation_date = Input::get('inactivation_date');
+        */
 
-        $group->designation = Input::get('designation');
-        $group->localization = Input::get('localization');
-        $group->creation_date = Input::get('creation_date');
-        $group->inactivation_date = Input::get('inactivation_date');
+        $obj->save();
 
 
-        $group->save();
-
-        $years = Input::get('team_coordinator.years');
-        if (!is_null($years))
-            foreach ($years as $year)
-                foreach (['coordinator' => 'Coordenador', 'secretary' => 'Secretario', 'treasurer' => 'Tesoureiro'] as $key => $value)
-                    $group->setRole(Role::role($value), $group->id, $year, (int)Input::get('team_coordinator.' . $year . '.' . $key . '.encontrista.id'));
 
 
         return response()->json([
-            'message' => is_null($id) ? 'Successfully created Group!' : 'Successfully updated Group!',
-            'group' => $group
+            'message' => is_null($id) ? 'Successfully created Meeting!' : 'Successfully updated Meeting!',
+            'obj' => $obj
         ]);
 
     }
@@ -94,7 +92,7 @@ class GroupController extends Controller
      */
     public function destroy($id)
     {
-        Group::findOrfail($id)->delete();
-        return response()->json(['message' => 'Successfully deleted the Group!']);
+        Meeting::findOrfail($id)->delete();
+        return response()->json(['message' => 'Successfully deleted the Meeting!']);
     }
 }

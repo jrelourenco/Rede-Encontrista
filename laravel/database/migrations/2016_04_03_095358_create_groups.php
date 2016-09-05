@@ -19,6 +19,8 @@ class CreateGroups extends Migration
             $table->bigInteger('creation_date');
             $table->bigInteger('inactivation_date')->nullable();
             $table->timestamps();
+            $table->softDeletes();
+
 
         });
     }

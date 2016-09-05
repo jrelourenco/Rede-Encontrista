@@ -14,7 +14,7 @@
         @Perm('sidebar.contact')
         <li><a href="{{ URL::to('contact') }}">Contactos</a></li>@endPerm
         @Perm('sidebar.admin.course')
-        <li class="admin"><a href="{{ URL::route('admin.meetings.index') }}">Gerir cursos</a></li>@endPerm
+        <li class="admin"><a href="{{ URL::route('admin.meeting.index') }}">Gerir cursos</a></li>@endPerm
         @Perm('sidebar.admin.group')
         <li class="admin"><a href="{{ URL::route('admin.group.index') }}">Gerir Grupos</a></li>@endPerm
     </ul>
