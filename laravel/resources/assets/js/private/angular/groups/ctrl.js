@@ -1,25 +1,24 @@
 angular.module('app')
-    .controller('ctrl', ['$scope', 'serv', '$filter','$uinModal', function ($scope, service, $filter) {
+    .controller('ctrl', ['$scope', 'rest', '$filter','$uibModal', function ($scope, rest, $filter,modal) {
 
-        service.groups().then(function (response) {
-            $scope.groupsService = response.data.groups;
+        rest.list().then(function (response) {
             $scope.$watch('search', function (value) {
-                $scope.groups = $filter('filter')($scope.groupsService, value);
+                $scope.objs = $filter('filter')( response.data, value);
                 $scope.currentPage = 1;
                 $scope.numPerPage = 10;
-                $scope.totalItems = $scope.groups.length;
+                $scope.totalItems = $scope.objs.length;
                 $scope.paginate = function (value) {
                     var begin, end, index;
                     begin = ($scope.currentPage - 1) * $scope.numPerPage;
                     end = begin + $scope.numPerPage;
-                    index = $scope.groups.indexOf(value);
+                    index = $scope.objs.indexOf(value);
                     return (begin <= index && index < end);
                 };
             });
 
         });
-        $scope.model = function (group) {
-            alert();
+        $scope.model = function (objs) {
+            alert(objs);
         };
 
     }]);

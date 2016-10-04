@@ -21,7 +21,7 @@
 
                 </div>
                 <div class="form-group ">
-                    <div class="btn btn-primary" type="button" ng-click="create()">Create</div>
+                    <div class="btn btn-primary" type="button" ng-click="openModel()">Create</div>
                 </div>
             </div>
             <table class="table table-hover">
@@ -34,13 +34,12 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr ng-repeat="obj in objs  | filter:paginate  track by $index" ng-click="open(obj.id)">
+                <tr ng-repeat="obj in objs  | filter:paginate  track by $index" ng-click="openModel(obj.id)">
 
                     <td><%obj.designation%></td>
                     <td><% obj.localization %></td>
                     <td><%obj.creation_date | date %></td>
-                    <td ng-if="obj.active"><i class="glyphicon glyphicon-ok text-success"></i></td>
-                    <td ng-if="!obj.active"><i class="glyphicon glyphicon-remove text-danger"></i></td>
+                    <td ng-bind-html="obj.active | icon "></td>
                 </tr>
 
                 </tbody>
@@ -58,9 +57,9 @@
 @section('javascript-asset')
     @include('layouts.rest_urls',[$model="group"])
     <script src="{{asset('js/angular/app.js')}}"></script>
-    <script src="{{asset('js/angular/groups/values.js')}}"></script>
-    <script src="{{asset('js/angular/serv.js')}}"></script>
+    <script src="{{asset('js/angular/restServ.js')}}"></script>
+
     <script src="{{asset('js/angular/modalCtrl.js')}}"></script>
     <script src="{{asset('js/angular/bootstrap-switch.js')}}"></script>
-    <script src="{{asset('js/angular/groups/ctrl.js')}}"></script>
+    <script src="{{asset('js/angular/restCtrl.js')}}"></script>
 @endsection
